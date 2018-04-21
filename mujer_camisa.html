@@ -1,0 +1,245 @@
+<html>
+	<head>
+		<title>SmartFitting</title>
+		<script src="jQuery/jquery-3.3.1.min.js"></script>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="app/js.js"></script>
+		
+		<style>
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body onload="cambiarTextos()">
+		</br>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>                        
+							  </button>
+							  <a class="navbar-brand" onclick="resetCheckbox()" href="inicio.html">SmartFitting	</a>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+							  <ul class="nav navbar-nav navbar-right">
+							   <button class="btn btn-lg btn-default navbar-btn">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cesta <span id="num_prod">(2)</span>
+							   </button>
+							   <button id="inicio_sesion"type="button" class="btn btn-lg btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Desconectar</button>
+							  </ul>
+							  <ul class="nav navbar-nav">	
+								<li style="margin-left:290px"><a onclick="resetCheckbox()" href="inicio_hombre.html">HOMBRE</a></li>
+								<li class="active"style="margin-left:20px"><a onclick="resetCheckbox()" href="inicio_mujer.html">MUJER</a></li>
+							  </ul>
+							  <br/>
+							  <br/>
+							  <br/>
+							  <ul class="nav navbar-nav">	
+								<li class="active" style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
+								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
+								
+							  </ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<br/>
+		
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Cerrar sesión</h4>
+				</div>
+				<div class="modal-body">
+				  <p>¿<span id="nombre"></span>¿De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
+				  <a class="btn btn-danger btn-lg" href="index.html"onclick="salir()" role="button">
+						Cerrar sesion
+				  </a>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+			<div class="row-fluid">
+				<div id="productos"class="col-sm-2" style="border-right: 2px solid">
+					<h3>FILTROS</h3><br/>
+					<div>
+						<p><b>TALLA</b></p>
+						<div style="margin-left:15px">
+							<div class="checkbox" >
+								<label>
+									<input id="talla_s" type="checkbox"> <b>S</b>
+								</label>
+								<br/><br/>
+								<label>
+									<input id="talla_m" type="checkbox"> <b>M</b>
+								</label>
+								<br/><br/>
+								<label>
+									<input id="talla_l" type="checkbox"> <b>L</b>
+								</label>
+								<br/><br/>
+								<label>
+									<input id="talla_xl" type="checkbox"> <b>XL</b>
+								</label>
+								<br/>
+							</div>
+						</div>
+					</div>	
+					<p><b>COLOR</b></p>
+					<div style="margin-left:15px">
+						<div class="checkbox" >
+							<label>
+								<input id="color1" type="checkbox"> <b>Negro</b>
+							</label>
+							<br/><br/>
+							<label>
+								<input id="color2" type="checkbox"> <b>Gris</b>
+							</label>
+							<br/><br/>
+							<label>
+								<input id="color3" type="checkbox"> <b>Azul</b>
+							</label>
+							<br/><br/>
+						</div>
+					</div>
+					<br/>
+					<a type="button" href="hombre_camisa.html" onclick="gestionFiltro()" class="btn btn-success">Aplicar filtro</a>
+					<br/>
+					<br/>
+					<a type="button" onclick="borrarFiltros()"href="hombre_camisa.html" class="btn btn-danger">Eliminar filtro </a>
+				</div>
+				<div class="col-sm-9">
+					<div id="prenda1" style="display:block" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Camisa flores</h4>
+							<a href="mujer_camisa_flores.html"><img src="Imagenes/mujer/Camisas/camisa1.jpg" alt="Camisa de flores. Lleva al prodcuto"/></a>
+							<br/>
+							<br/>
+							<p>
+								<b>125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							</p>
+						</div>
+					</div>
+					<div id="prenda2" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Camisa vaquera</h4>
+							<a href="mujer_camisa_vaquera.html"><img src="Imagenes/mujer/Camisas/camisa2.jpg" alt="Camisa vaquera. Lleva al prodcuto"/></a>
+							<br/>
+							<br/>
+							<p>
+								<b>125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa2">Ampliar imagen</button>
+							</p>
+						</div>
+					</div>
+					<div id="prenda3" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Camisa provisional</h4>
+							<a href="mujer_camisa_provisional.html"><img src="Imagenes/hombre/Camisas/camisa_azul.jpg"alt="Camisa azul. Lleva al prodcuto"/></a>
+							<br/>
+							<br/>
+							<p>
+								<b>125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa3">Ampliar imagen</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa1" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa de flores</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/mujer/Camisas/camisa1.jpg"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa2" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa vaquera</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/mujer/Camisas/camisa2.jpg"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa3" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa provisional</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/hombre/Camisas/camisa_azul.jpg"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+	</body>
+</html>

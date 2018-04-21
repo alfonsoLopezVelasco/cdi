@@ -16,46 +16,19 @@ function cambiarTextos(){
 		document.getElementById("talla_s").setAttribute("checked",true);
 	}
 	if(sessionStorage["tallam"]=="true"){
+		
 		document.getElementById("talla_m").setAttribute("checked",true);
 	}
 	if(sessionStorage["tallal"]=="true"){
+		document.getElementById("prenda1").style.display="none";
 		document.getElementById("talla_l").setAttribute("checked",true);
 	}
 	if(sessionStorage["tallaxl"]=="true"){
 		document.getElementById("talla_xl").setAttribute("checked",true);
 		document.getElementById("prenda1").style.display='none';
 	}
-	if(sessionStorage["color1"]=="true"){
-		document.getElementById("prenda2").style.display="none";
-		document.getElementById("prenda3").style.display="none";
-		document.getElementById("color1").setAttribute("checked",true);
-		if(sessionStorage["color2"]=="true"){
-			document.getElementById("prenda3").style.display="none";
-			document.getElementById("prenda2").style.display="block";
-			document.getElementById("color2").setAttribute("checked",true);
-			if(sessionStorage["color3"]=="true"){
-				document.getElementById("prenda3").style.display="block";
-				document.getElementById("color3").setAttribute("checked",true);
-			}
-		}else if(sessionStorage["color3"]=="true"){
-			document.getElementById("prenda3").style.display="block";
-			document.getElementById("color3").setAttribute("checked",true);
-		}
-	}else if(sessionStorage["color2"]=="true"){
-		document.getElementById("color2").setAttribute("checked",true); 
-		document.getElementById("prenda1").style.display="none";
-		document.getElementById("prenda3").style.display="none";
-		if(sessionStorage["color3"]=="true"){
-			document.getElementById("prenda3").style.display="block";
-			document.getElementById("color3").setAttribute("checked",true);
-		}
-	}else if(sessionStorage["color3"]=="true"){
-		document.getElementById("color3").setAttribute("checked",true);
-		document.getElementById("prenda1").style.display="none";
-		document.getElementById("prenda2").style.display="none";
-	}
-	
 }
+
 
 function resetCheckbox(){
 	sessionStorage["tallas"]= "false";
@@ -65,7 +38,6 @@ function resetCheckbox(){
 	sessionStorage["color1"]="false";
 	sessionStorage["color2"]="false";
 	sessionStorage["color3"]="false";
-	
 }
 
 function contadorProductos(n){
@@ -100,6 +72,7 @@ function salir(){
 }
 
 function gestionFiltro(){
+	resetCheckbox();
 	if(document.getElementById("talla_s").checked){
 		sessionStorage["tallas"]= "true";
 		document.getElementById("talla_s").setAttribute("checked",true);
@@ -124,25 +97,8 @@ function gestionFiltro(){
 	}else{
 		sessionStorage["tallaxl"]= "false";
 	}
-	if(document.getElementById("color1").checked){
-		sessionStorage["color1"]="true";
-		document.getElementById("color1").setAttribute("checked",true);
-	}else{
-		sessionStorage["color1"]= "false";
-	}
-	if(document.getElementById("color2").checked){
-		sessionStorage["color2"]="true";
-		document.getElementById("color2").setAttribute("checked",true);
-	}else{
-		sessionStorage["color2"]= "false";
-	}
-	if(document.getElementById("color3").checked){
-		sessionStorage["color3"]="true";
-		document.getElementById("color3").setAttribute("checked",true);
-	}else{
-		sessionStorage["color3"]= "false";
-	}
 }
+
 
 function borrarFiltros(){
 	resetCheckbox();

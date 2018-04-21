@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>SmartFitting</title>
+		<script src="jQuery/jquery-3.3.1.min.js"></script>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="app/js.js"></script>
+		
+		
+		<style>
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body onload="cambiarTextos()">
+		</br>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>                        
+							  </button>
+							  <a class="navbar-brand" href="#">SmartFitting	</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<br/>
+		
+		<div class="container">
+			<div class="row-fluid">
+				<div class="col-sm-4 col-sm-offset-1 panel panel-default">
+				  <h2>Iniciar sesión</h2>
+				  <div class="panel panel-default">
+					<div class="panel-body">
+						<div class="form-group">
+					<label>Nombre Usuario</label>
+					<input type="text" class="form-control" id="user" placeholder="Email">
+				  </div>
+				  <div class="form-group">
+					<label>Contraseña</label>
+					<input type="password" class="form-control" id="pass" placeholder="Password">
+				  </div>
+				  <button class="btn btn-primary" onclick="comprobarDatosUsuario();"> Enviar</button>
+						
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-4 panel panel-default" style="margin-left: 20px">
+				  <h2>Acceder como invitado</h2>
+				  <div class="panel-body">
+						<a class="btn btn-primary btn-lg" href="inicio.html">Acceder como invitado</a>
+				  </div>
+				</div>
+			</div>	
+		</div>
+		<br/>
+	</body>
+</html>
+		

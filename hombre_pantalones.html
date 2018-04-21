@@ -43,9 +43,9 @@
 							  <br/>
 							  <br/>
 							  <ul class="nav navbar-nav">	
-								<li class="active" style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
+								<li style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
+								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
@@ -116,30 +116,26 @@
 					<div style="margin-left:15px">
 						<div class="checkbox" >
 							<label>
-								<input id="color1" type="checkbox"> <b>Rojo</b>
+								<input id="color1" type="checkbox"> <b>Negro</b>
 							</label>
 							<br/><br/>
 							<label>
-								<input id="color2" type="checkbox"> <b>Negro</b>
-							</label>
-							<br/><br/>
-							<label>
-								<input id="color3" type="checkbox"> <b>Azul</b>
+								<input id="color2" type="checkbox"> <b>Amarillo</b>
 							</label>
 							<br/><br/>
 						</div>
 					</div>
 					<br/>
-					<a type="button" href="hombre_camisa.html" onclick="gestionFiltro()" class="btn btn-success">Aplicar filtro</a>
+					<a type="button" href="hombre_pantalones.html" onclick="gestionFiltro()" class="btn btn-success">Aplicar filtro</a>
 					<br/>
 					<br/>
-					<a type="button" onclick="borrarFiltros()"href="hombre_camisa.html" class="btn btn-danger">Eliminar filtro </a>
+					<a type="button" onclick="borrarFiltros()"href="hombre_pantalones.html" class="btn btn-danger">Eliminar filtro </a>
 				</div>
 				<div class="col-sm-9">
 					<div id="prenda1" style="display:block" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Camisa negra</h4>
-							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
+							<h4>Pantalón negro</h4>
+							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/pantalones/pantalones1.jpg"/></a>
 							<br/>
 							<br/>
 							<p>
@@ -150,25 +146,13 @@
 					</div>
 					<div id="prenda2" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Camisa a cuadros</h4>
-							<a href="hombre_camisa_cuadros.html"><img src="Imagenes/hombre/Camisas/camisa_cuadros.jpg"/></a>
+							<h4>Pantalón amarillo</h4>
+							<a href="hombre_camisa_cuadros.html"><img src="Imagenes/hombre/pantalones/pantalones2.jpg"/></a>
 							<br/>
 							<br/>
 							<p>
 								<b>125.35€</b>
 								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa2">Ampliar imagen</button>
-							</p>
-						</div>
-					</div>
-					<div id="prenda3" class="col-sm-5 col-sm-offset-1 panel panel-default">
-						<div class="panel-body">
-							<h4>Camisa azul</h4>
-							<a href="hombre_camisa_azul.html"><img src="Imagenes/hombre/Camisas/camisa_azul.jpg"/></a>
-							<br/>
-							<br/>
-							<p>
-								<b>125.35€</b>
-								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa3">Ampliar imagen</button>
 							</p>
 						</div>
 					</div>
@@ -184,10 +168,10 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Nombre Camisa</h4>
+				  <h2 class="modal-title">Pantalón negro</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/>
+					<img src="Imagenes/hombre/pantalones/pantalones1.jpg"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -206,32 +190,10 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Nombre Camisa</h4>
+				  <h2 class="modal-title">Pantalón amarillo</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_cuadros.jpg"/>
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				</div>
-			  </div>
-			  
-			</div>
-		  </div>			  
-		</div>
-		<div class="container">
-		  <!-- Modal -->
-		  <div class="modal fade" id="camisa3" role="dialog">
-			<div class="modal-dialog">
-			
-			  <!-- Modal content-->
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Nombre Camisa</h4>
-				</div>
-				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_azul.jpg"/>
+					<img src="Imagenes/hombre/pantalones/pantalones2.jpg"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

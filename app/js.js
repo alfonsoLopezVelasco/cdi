@@ -29,13 +29,27 @@ function cambiarTextos(){
 		document.getElementById("prenda2").style.display="none";
 		document.getElementById("prenda3").style.display="none";
 		document.getElementById("color1").setAttribute("checked",true);
-	}
-	if(sessionStorage["color2"]=="true"){
+		if(sessionStorage["color2"]=="true"){
+			document.getElementById("prenda3").style.display="none";
+			document.getElementById("prenda2").style.display="block";
+			document.getElementById("color2").setAttribute("checked",true);
+			if(sessionStorage["color3"]=="true"){
+				document.getElementById("prenda3").style.display="block";
+				document.getElementById("color3").setAttribute("checked",true);
+			}
+		}else if(sessionStorage["color3"]=="true"){
+			document.getElementById("prenda3").style.display="block";
+			document.getElementById("color3").setAttribute("checked",true);
+		}
+	}else if(sessionStorage["color2"]=="true"){
 		document.getElementById("color2").setAttribute("checked",true); 
 		document.getElementById("prenda1").style.display="none";
 		document.getElementById("prenda3").style.display="none";
-	}
-	if(sessionStorage["color3"]=="true"){
+		if(sessionStorage["color3"]=="true"){
+			document.getElementById("prenda3").style.display="block";
+			document.getElementById("color3").setAttribute("checked",true);
+		}
+	}else if(sessionStorage["color3"]=="true"){
 		document.getElementById("color3").setAttribute("checked",true);
 		document.getElementById("prenda1").style.display="none";
 		document.getElementById("prenda2").style.display="none";

@@ -50,7 +50,6 @@
 								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
 								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
-								
 							  </ul>
 							</div>
 						</div>
@@ -98,11 +97,11 @@
 					</div></span>
 					<div class="col-sm-5" style="margin-left:50px;">
 						<h3>Tallas</h3>
-						<div class="btn-group col-sm-5" role="group" aria-label="...">
-						  <a type="button" class="btn btn-default">S</a>
-						  <a type="button" class="btn btn-default">M</a>
-						  <a type="button" class="btn btn-default disabled">L</a>
-						  <a type="button" class="btn btn-default disabled">XL</a>
+						<div class="form-group col-sm-5">
+							<select class="form-control" id="talla">
+							  <option value="s">S</option>
+							  <option value="m">M</option>
+							</select>
 						</div>
 						<br/>
 						<br/>
@@ -130,7 +129,7 @@
 						<br/>	
 						<br/>	
 						<br/>
-						<a href="hombre_camisa_negra.html" onclick="aniadir()" class="btn btn-lg btn-success">Añadir al probador</a>
+						<a href="hombre_camisa_negra.html" onclick="aniadir('hombre_camisa_negra')" class="btn btn-lg btn-success">Añadir al probador</a>
 					</div>
 				</div>
 			</div>

@@ -27,6 +27,11 @@ function cambiarTextos(){
 		document.getElementById("talla_xl").setAttribute("checked",true);
 		document.getElementById("prenda1").style.display='none';
 	}
+	if(sessionStorage["cesta"]=="true"){
+		document.getElementById("numProd").style.display="block"
+		document.getElementById("numProd").innerHTML="Probador(" + sessionStorage["prendas"] + ")";
+	}else
+		document.getElementById("numProd").innerHTML="Probador"
 }
 
 
@@ -69,6 +74,28 @@ function comprobarDatosUsuario() {
 }
 function salir(){
 	sessionStorage.clear();
+}
+
+
+function aniadir(){
+	var cantidad = document.getElementById('cantidad')
+	var select= cantidad.options[cantidad.selectedIndex];
+	var resul = select.value
+	if(sessionStorage["prendas"]==null || (parseInt(sessionStorage["prendas"]) + parseInt(resul))<=10){
+		if(sessionStorage["prendas"]==null){
+			sessionStorage["prendas"]=resul
+		}
+		else{
+			var aux = parseInt(sessionStorage["prendas"]) + parseInt(resul);
+			sessionStorage["prendas"]=aux;
+			
+		}
+		sessionStorage["cesta"]="true"
+		
+	}else{
+		alert("No se puede tener mas de 10 productos para el probador")
+
+	}
 }
 
 function gestionFiltro(){

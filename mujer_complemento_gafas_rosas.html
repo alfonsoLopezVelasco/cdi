@@ -1,0 +1,151 @@
+<html>
+	<head>
+		<title>SmartFitting</title>
+		<script src="jQuery/jquery-3.3.1.min.js"></script>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="app/js.js"></script>
+		
+		<style>
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body onload="cambiarTextos()">
+		</br>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>                        
+							  </button>
+							  <a class="navbar-brand" onclick="resetCheckbox()" href="inicio.html">SmartFitting	</a>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+							  <ul class="nav navbar-nav navbar-right">
+							   <button class="btn btn-lg btn-default navbar-btn">
+									<span style="display:block" id="numProd"></span>
+							   </button>
+							   <button id="inicio_sesion"type="button" class="btn btn-lg btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Desconectar</button>
+							  </ul>
+							  <ul class="nav navbar-nav">	
+								<li style="margin-left:290px"><a onclick="resetCheckbox()" href="inicio_hombre.html">HOMBRE</a></li>
+								<li class="active"style="margin-left:20px"><a onclick="resetCheckbox()" href="inicio_mujer.html">MUJER</a></li>
+							  </ul>
+							  <br/>
+							  <br/>
+							  <br/>
+							  <ul class="nav navbar-nav">	
+								<li style="margin-left:20px"><a href="mujer_camisa.html">CAMISAS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_camisetas.html">CAMISETAS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_pantalones.html">PANTALONES</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_zapatos.html">ZAPATOS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_abrigos.html">ABRIGOS</a></li>
+								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_complementos.html">COMPLEMENTOS</a></li>
+								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
+								
+							  </ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<br/>
+		
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Cerrar sesión</h4>
+				</div>
+				<div class="modal-body">
+				  <p>¿<span id="nombre"></span>De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
+				  <a class="btn btn-danger btn-lg" href="index.html"onclick="salir()" role="button">
+						Cerrar sesion
+				  </a>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		
+		
+		
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<h1>Gafas de sol rosas</h1>
+					<span data-toggle="modal" data-target="#camisa"><div class="col-sm-5 panel panel-default">
+						<img src="Imagenes/complementos/complemento2.jpg"alt="Gafas de sol de patilla fina con cristal rosado">
+					</div></span>
+					<div class="col-sm-5" style="margin-left:50px;">
+						<br/>
+						<h3>Cantidad</h3>
+						<div class="form-group col-sm-5">
+							<select class="form-control" id="cantidad">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>
+							  <option value="9">9</option>
+							  <option value="10">10</option>
+							</select>
+						</div>
+					    <br/>
+					    <br/>
+						<h3>Descripción</h3>
+						<p>
+							Este producto de algosodfshfisdhfs fsdfsdfsfsdf							
+						</p>
+						<br/>	
+						<br/>	
+						<br/>
+						<a href="mujer_complemento_gafas_rosa.html" onclick="aniadir()" class="btn btn-lg btn-success">Añadir al probador</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Gafas rosas</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/complementos/complemento2.jpg" alt="Gafas de sol de patilla fina con cristal rosado"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			</div>
+		  </div>			  
+		</div>			
+	</body>
+</html>

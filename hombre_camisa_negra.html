@@ -43,11 +43,11 @@
 							  <br/>
 							  <br/>
 							  <ul class="nav navbar-nav">	
-								<li style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
+								<li class="active" style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
-								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
 								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
 							  </ul>
@@ -71,7 +71,7 @@
 				  <h2 class="modal-title">Cerrar sesión</h4>
 				</div>
 				<div class="modal-body">
-				  <p>¿<span id="nombre"></span>De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
+				  <p>¿<span id="nombre"></span>¿De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
 				  <a class="btn btn-danger btn-lg" href="index.html"onclick="salir()" role="button">
 						Cerrar sesion
 				  </a>
@@ -92,7 +92,7 @@
 				<div class="col-sm-12">
 					<h1>Camisa negra</h1>
 					<span data-toggle="modal" data-target="#camisa1"><div class="col-sm-5 panel panel-default">
-						<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg">
+						<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg" alt="Camisa lisa negra">
 						
 					</div></span>
 					<div class="col-sm-5" style="margin-left:50px;">
@@ -159,7 +159,7 @@
 							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
 							<br/>
 							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa2">Ampliar imagen</button>
 						</div>
 					</div>
 					<div id="prenda1" style="display:block margin_left:15px;" class="col-sm-3 panel panel-default">
@@ -168,7 +168,7 @@
 							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
 							<br/>
 							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa3">Ampliar imagen</button>
 						</div>
 					</div>
 					<div id="prenda1" style="display:block margin_left:15px;" class="col-sm-3 panel panel-default">
@@ -177,11 +177,33 @@
 							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
 							<br/>
 							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa4">Ampliar imagen</button>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa negra</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg" alt="Camisa lisa negra"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
 		</div>
 		<div class="container">
 		  <!-- Modal -->
@@ -195,7 +217,7 @@
 				  <h2 class="modal-title">Nombre Camisa</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/>
+					<img src="Imagenes/hombre/Camisas/camisa_cuadros.jpg"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -251,7 +273,7 @@
 		</div>	
 		<div class="container">
 		  <!-- Modal -->
-		  <div class="modal fade" id="camisa3" role="dialog">
+		  <div class="modal fade" id="camisa4" role="dialog">
 			<div class="modal-dialog">
 			
 			  <!-- Modal content-->
@@ -267,32 +289,9 @@
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 				</div>
 			  </div>
-			  
 			</div>
 		  </div>			  
-		</div>
-		<div class="container">
-		  <!-- Modal -->
-		  <div class="modal fade" id="limiteProductos" role="dialog">
-			<div class="modal-dialog">
-			
-			  <!-- Modal content-->
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">limite de prodcutos alcanzado</h4>
-				</div>
-				<div class="modal-body">
-					<p>No se puede tener más de 10 pruducto en el probador</p>
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				</div>
-			  </div>
-			  
-			</div>
-		  </div>			  
-		</div>
+		</div>		  
 	</body>
 
 </html>

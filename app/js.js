@@ -77,24 +77,33 @@ function salir(){
 }
 
 
-function aniadir(){
+function aniadir(id){
 	var cantidad = document.getElementById('cantidad')
-	var select= cantidad.options[cantidad.selectedIndex];
-	var resul = select.value
-	if(sessionStorage["prendas"]==null || (parseInt(sessionStorage["prendas"]) + parseInt(resul))<=10){
+	var selectCantidad= cantidad.options[cantidad.selectedIndex];
+	var resulCantidad = selectCantidad.value
+	var talla = document.getElementById('talla')
+	var selectTalla= talla.options[talla.selectedIndex];
+	var resulTalla = selectTalla.value
+	var i;
+	if(sessionStorage["prendas"]==null || (parseInt(sessionStorage["prendas"]) + parseInt(resulCantidad))<=10){
 		if(sessionStorage["prendas"]==null){
-			sessionStorage["prendas"]=resul
+			sessionStorage["prendas"]=resulCantidad
+			i=0;
 		}
 		else{
-			var aux = parseInt(sessionStorage["prendas"]) + parseInt(resul);
-			sessionStorage["prendas"]=aux;
-			
+			i=sessionStorage["prendas"];
+			var aux1 = parseInt(sessionStorage["prendas"]) + parseInt(resulCantidad);
+			sessionStorage["prendas"]=aux1;
 		}
 		sessionStorage["cesta"]="true"
+		for(i; i<resulCantidad;i++){
+			var aux2 = id + " " + resulTalla
+			var key = i.toString()
+			sessionStorage.setItem(key, aux2)
+		}
 		
 	}else{
 		alert("No se puede tener mas de 10 productos para el probador")
-
 	}
 }
 

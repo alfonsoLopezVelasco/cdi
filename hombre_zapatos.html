@@ -31,7 +31,7 @@
 							<div class="collapse navbar-collapse" id="myNavbar">
 							  <ul class="nav navbar-nav navbar-right">
 							   <button class="btn btn-lg btn-default navbar-btn">
-									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Probador <span id="num_prod">(2)</span>
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cesta <span id="num_prod">(2)</span>
 							   </button>
 							   <button id="inicio_sesion"type="button" class="btn btn-lg btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Desconectar</button>
 							  </ul>
@@ -46,8 +46,8 @@
 								<li style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
-								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
+								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
 								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
 								
@@ -72,7 +72,7 @@
 				  <h2 class="modal-title">Cerrar sesión</h4>
 				</div>
 				<div class="modal-body">
-				  <p>¿<span id="nombre"></span>De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
+				  <p>¿<span id="nombre"></span>¿De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
 				  <a class="btn btn-danger btn-lg" href="index.html"onclick="salir()" role="button">
 						Cerrar sesion
 				  </a>
@@ -86,98 +86,73 @@
 		  </div>			  
 		</div>
 		<div class="container">
-		
-		
-		
 			<div class="row-fluid">
-				<div class="col-sm-12">
-					<h1>Camisa negra</h1>
-					<span data-toggle="modal" data-target="#camisa1"><div class="col-sm-5 panel panel-default">
-						<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg">
-						
-					</div></span>
-					<div class="col-sm-5" style="margin-left:50px;">
-						<h3>Tallas</h3>
-						<div class="btn-group col-sm-5" role="group" aria-label="...">
-						  <a type="button" class="btn btn-default">S</a>
-						  <a type="button" class="btn btn-default">M</a>
-						  <a type="button" class="btn btn-default disabled">L</a>
-						  <a type="button" class="btn btn-default disabled">XL</a>
+				<div id="productos"class="col-sm-2" style="border-right: 2px solid">
+					<h3>FILTROS</h3><br/>
+					<div>
+						<p><b>TALLA</b></p>
+						<div style="margin-left:15px">
+							<div class="checkbox" >
+								<label>
+									<input id="talla_s" type="checkbox"> <b>S</b>
+								</label>
+								<br/><br/>
+								<label>
+									<input id="talla_m" type="checkbox"> <b>M</b>
+								</label>
+								<br/><br/>
+								<label>
+									<input id="talla_l" type="checkbox"> <b>L</b>
+								</label>
+								<br/><br/>
+								<label>
+									<input id="talla_xl" type="checkbox"> <b>XL</b>
+								</label>
+								<br/>
+							</div>
 						</div>
-						<br/>
-						<br/>
-						<h3>Cantidad</h3>
-						<div class="form-group col-sm-5">
-							<select class="form-control" id="exampleFormControlSelect1">
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>
-							  <option value="9">9</option>
-							  <option value="10">10</option>
-							</select>
-						</div>
-					    <br/>
-					    <br/>
-						<h3>Descripción</h3>
-						<p>
-							Este producto de algosodfshfisdhfs fsdfsdfsfsdf							
-						</p>
-						<br/>	
-						<br/>	
-						<br/>
-						<a href="hombre_camisa_negra.html" onclick="aniadir()" class="btn btn-lg btn-success">Añadir al probador</a>
 					</div>
+					<br/>
+					<a type="button" href="hombre_zapatos.html" onclick="gestionFiltro()" class="btn btn-success">Aplicar filtro</a>
+					<br/>
+					<br/>
+					<a type="button" onclick="borrarFiltros()"href="hombre_zapatos.html" class="btn btn-danger">Eliminar filtro </a>
 				</div>
-			</div>
-		</div>
-		<div class="container">
-			<br/>
-			<br/>
-			<br/>
-			<div class="row-fluid">
-				<div class="col-sm-12">
-					<h2>Recomendaciones</h2>
-					
-					<p>Te recomendamos los siguientes prudcutos para completar tu outfit</p>
-					<div id="prenda1" style="display:block" class="col-sm-3  panel panel-default">
+				<div class="col-sm-9">
+					<div id="prenda1" style="display:block" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Camisa negra</h4>
-							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
+							<h4>Zapato marrón de cuero</h4>
+							<a href="hombre_zapato_marron_cuero.html"><img src="Imagenes/hombre/zapatos/zapatos1.jpg" alt="Zapato de piel marron"/></a>
 							<br/>
 							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							<p>
+								<b>125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							</p>
 						</div>
 					</div>
-					<div id="prenda1" style="display:block; margin_left:50px;" class="col-sm-3 panel panel-default">
+					<div id="prenda2" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Camisa negra</h4>
-							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
+							<h4>Zapato negro</h4>
+							<a href="hombre_zapato_negro.html"><img src="Imagenes/hombre/zapatos/zapatos2.jpg" alt="Zapato de tela negro"/></a>
 							<br/>
 							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							<p>
+								<b>125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa2">Ampliar imagen</button>
+							</p>
 						</div>
 					</div>
-					<div id="prenda1" style="display:block margin_left:15px;" class="col-sm-3 panel panel-default">
+					<div id="prenda3" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Camisa negra</h4>
-							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
+							<h4>Zapato de tela marrón</h4>
+							<a href="hombre_zapato_marron_tela.html"><img src="Imagenes/hombre/zapatos/zapatos3.jpg" alt="Zapato de tela marrón"/></a>
 							<br/>
 							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
-						</div>
-					</div>
-					<div id="prenda1" style="display:block margin_left:15px;" class="col-sm-3 panel panel-default">
-						<div class="panel-body">
-							<h4>Camisa negra</h4>
-							<a href="hombre_camisa_negro.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/></a>
-							<br/>
-							<br/>
-							<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
+							<p>
+								<b>125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa3">Ampliar imagen</button>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -192,10 +167,10 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Nombre Camisa</h4>
+				  <h2 class="modal-title">Zapato marrón de cuero</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/>
+					<img src="Imagenes/hombre/zapatos/zapatos1.jpg" alt="Zapato de piel marron"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -214,10 +189,10 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Nombre Camisa</h4>
+				  <h2 class="modal-title">Zapato de tela negro</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_cuadros.jpg"/>
+					<img src="Imagenes/hombre/zapatos/zapatos2.jpg" alt="Zapato de tela negro"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -236,32 +211,10 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Abrigo</h4>
+				  <h2 class="modal-title">Zapato de tela marrón</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/abrigos/abrigo1.jpg"/>
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				</div>
-			  </div>
-			  
-			</div>
-		  </div>			  
-		</div>	
-		<div class="container">
-		  <!-- Modal -->
-		  <div class="modal fade" id="camisa3" role="dialog">
-			<div class="modal-dialog">
-			
-			  <!-- Modal content-->
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Nombre Camisa</h4>
-				</div>
-				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_azul.jpg"/>
+					<img src="Imagenes/hombre/zapatos/zapatos3.jpg" alt="Zapato de tela marrón"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

@@ -27,7 +27,7 @@ function cambiarTextos(){
 		document.getElementById("talla_xl").setAttribute("checked",true);
 		document.getElementById("prenda1").style.display='none';
 	}
-	if(sessionStorage["cesta"]=="true"){
+	if(sessionStorage["cesta"]=="true" && sessionStorage["prendas"]>0){
 		document.getElementById("numProd").style.display="block"
 		document.getElementById("numProd").innerHTML="Cesta(" + sessionStorage["prendas"] + ")";
 	}else{

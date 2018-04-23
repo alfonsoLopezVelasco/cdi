@@ -194,12 +194,12 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Cerrar sesiÃ³n</h4>
+				  <h2 class="modal-title">Cerrar sesión</h4>
 				</div>
 				<div class="modal-body">
-				  <p>Â¿<span id="nombre"></span>De verdad quiere salir del probador? Todos los productos seleccionados se perderan.</p>
+				  <p>¿<span id="nombre"></span>De verdad quiere salir del probador? Todos los productos seleccionados se perderán.</p>
 				  <a class="btn btn-danger btn-lg" href="index.html"onclick="salir()" role="button">
-						Cerrar sesion
+						Cerrar sesión
 				  </a>
 				</div>
 				<div class="modal-footer">
@@ -225,14 +225,14 @@
 				  <h2 class="modal-title">Ticket</h4>
 				</div>
 				<div class="modal-body">
-					Nombre de la empresa: SmartFitting
+					<b>Nombre de la empresa:</b> SmartFitting
 					</br>
-					Fecha: <script>
+					<b>Fecha:</b> <script>
 								var f = new Date();
 								document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
 							</script>
 					</br>
-					Hora: <script type="text/javascript">
+					<b>Hora:</b> <script type="text/javascript">
 							var d = new Date();
 							document.write(d.getHours());
 							document.write(":");
@@ -240,6 +240,20 @@
 							document.write(":");
 							document.write(d.getSeconds());
 						  </script>
+					<br/>	
+					<b>Productos:</b> <br/><script type="text/javascript">
+								for(i=1; i <= parseInt(sessionStorage["prendas"]); i++){
+									var auxiliar = sessionStorage[i].split(",")
+									document.write(auxiliar[0] + "   125.35€")
+									document.write("<br/>")
+								}
+							   </script>
+					
+					
+					<b>Precio Total:</b> <script type="text/javascript">
+									var resul= 125.35 * sessionStorage["prendas"]
+									document.write(resul)
+								  </script>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

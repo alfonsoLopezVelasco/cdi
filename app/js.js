@@ -130,10 +130,6 @@ function cambiarTextos(){
 	
 }
 
-
-
-
-
 function resetCheckbox(){
 	sessionStorage["tallas"]= "false";
 	sessionStorage["tallam"]= "false";

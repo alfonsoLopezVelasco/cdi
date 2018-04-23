@@ -115,7 +115,7 @@ function cambiarTextos(){
 		document.getElementById("p10").alt="miniatura de " + textos[0]
 	}
 	
-	if(sessionStorage["foto1"]=="true" || sessionStorage["foto1"]==null){
+	if(sessionStorage["foto1"]=="true" && sessionStorage["foto1"]==null){
 		document.getElementById("foto1").style.display="none"
 	}
 	if(sessionStorage["foto2"]=="true" && sessionStorage["foto2"]!=null){

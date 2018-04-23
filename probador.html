@@ -30,9 +30,9 @@
 							</div>
 							<div class="collapse navbar-collapse" id="myNavbar">
 							  <ul class="nav navbar-nav navbar-right">
-							   <button class="btn btn-lg btn-default navbar-btn">
-									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cesta <span id="num_prod">(2)</span>
-							   </button>
+							   <a href="probador.html" class="btn btn-lg btn-default navbar-btn">
+									<span style="display:block" id="numProd"></span>
+							   </a>
 							   <button id="inicio_sesion"type="button" class="btn btn-lg btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Desconectar</button>
 							  </ul>
 							  <ul class="nav navbar-nav">	
@@ -63,95 +63,92 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div id="listaProductos" class="col-sm-4">
-						<div id="1" class="col-sm-12">
-						
-						</div>
 						<div id="1" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p1" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p1t"></p></div>
 							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+								<a href="probador.html" onclick="eliminar(0)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="2" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p2" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p2t"></p></div>
 							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+								<a href="probador.html" onclick="eliminar(1)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="3" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p3" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p3t"></p></div>
 							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+								<a href="probador.html" onclick="eliminar(2)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="4" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p4" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p4t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="5" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p5" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p5t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="6" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p6" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p6t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="7" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p7" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p7t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="8" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p8" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p8t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="9" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p9" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p9t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
 						</div>
 						<div id="10" style="display:block" class="col-sm-12">
 							<div class="col-sm-3 panel panel-default">
-								<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg"/ >
+								<img id="p10" src=""/ >
 							</div>
-							<div class="col-sm-7"><br/><p>Camisa negra talla S</p></div>
+							<div class="col-sm-7"><br/><p id="p10t"></p></div>
 							<div class="col-sm-2">
 								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>

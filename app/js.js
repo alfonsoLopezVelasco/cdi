@@ -29,10 +29,85 @@ function cambiarTextos(){
 	}
 	if(sessionStorage["cesta"]=="true"){
 		document.getElementById("numProd").style.display="block"
-		document.getElementById("numProd").innerHTML="Probador(" + sessionStorage["prendas"] + ")";
-	}else
-		document.getElementById("numProd").innerHTML="Probador"
+		document.getElementById("numProd").innerHTML="Cesta(" + sessionStorage["prendas"] + ")";
+	}else{
+		document.getElementById("numProd").innerHTML="Cesta"
+	}
+	if(sessionStorage[0]=="false"  || sessionStorage[0]==null){
+		document.getElementById("1").style.display="none"
+	}else{
+		var textos = sessionStorage["0"].split(",")
+		document.getElementById("p1t").innerHTML=textos[0];
+		document.getElementById("p1").src=textos[2]
+	}
+	if(sessionStorage[1]=="false"  || sessionStorage[1]==null){
+		document.getElementById("2").style.display="none"
+	}else{
+		var textos = sessionStorage["1"].split(",")
+		document.getElementById("p2t").innerHTML=textos[0];
+		document.getElementById("p2").src=textos[2]
+	}
+	if(sessionStorage[2]!=null){
+		var textos = sessionStorage["2"].split(",")
+		document.getElementById("p3t").innerHTML=textos[0];
+		document.getElementById("p3").src=textos[2]
+	}else{
+		document.getElementById("3").style.display="none"
+	}
+	if(sessionStorage[3]!=null){
+		var textos = sessionStorage["3"].split(",")
+		document.getElementById("p4t").innerHTML=textos[0];
+		document.getElementById("p4").src=textos[2]
+	}else{
+		document.getElementById("4").style.display="none"
+	}
+	if(sessionStorage[4]!=null){
+		var textos = sessionStorage["4"].split(",")
+		document.getElementById("p5t").innerHTML=textos[0];
+		document.getElementById("p5").src=textos[2]
+	}else{
+		document.getElementById("5").style.display="none"
+	}
+	if(sessionStorage[5]!=null){
+		var textos = sessionStorage["5"].split(",")
+		document.getElementById("p6t").innerHTML=textos[0];
+		document.getElementById("p6").src=textos[2]
+	}else {
+		document.getElementById("6").style.display="none"
+	}
+	if(sessionStorage[6]!=null){
+		var textos = sessionStorage["6"].split(",")
+		document.getElementById("p7t").innerHTML=textos[0];
+		document.getElementById("p7").src=textos[2]
+	}else{
+		document.getElementById("7").style.display="none"
+	}
+	if(sessionStorage[7]!=null){
+		var textos = sessionStorage["7"].split(",")
+		document.getElementById("p8t").innerHTML=textos[0];
+		document.getElementById("p8").src=textos[2]
+	}else{
+		document.getElementById("8").style.display="none"
+	}
+	if(sessionStorage[8]!=null){
+		var textos = sessionStorage["8"].split(",")
+		document.getElementById("p9t").innerHTML=textos[0];
+		document.getElementById("p9").src=textos[2]
+	}else{
+		document.getElementById("9").style.display="none"
+	}
+		if(sessionStorage[9]!=null){
+		var textos = sessionStorage["9"].split(",")
+		document.getElementById("p10t").innerHTML=textos[0];
+		document.getElementById("p10").src=textos[2]
+	}else{
+		document.getElementById("10").style.display="none"
+	}
+	
 }
+
+
+
 
 
 function resetCheckbox(){
@@ -40,15 +115,8 @@ function resetCheckbox(){
 	sessionStorage["tallam"]= "false";
 	sessionStorage["tallal"]= "false";
 	sessionStorage["tallaxl"]= "false";
-	sessionStorage["color1"]="false";
-	sessionStorage["color2"]="false";
-	sessionStorage["color3"]="false";
 }
 
-function contadorProductos(n){
-	document.getElementById("").innerHTML = "(" + n +  ")";
-	
-}
 
 function comprobarDatosUsuario() {
 	var u = document.getElementById("user").value;
@@ -77,7 +145,7 @@ function salir(){
 }
 
 
-function aniadir(id){
+function aniadir(id, url){
 	var cantidad = document.getElementById('cantidad')
 	var selectCantidad= cantidad.options[cantidad.selectedIndex];
 	var resulCantidad = selectCantidad.value
@@ -88,16 +156,16 @@ function aniadir(id){
 	if(sessionStorage["prendas"]==null || (parseInt(sessionStorage["prendas"]) + parseInt(resulCantidad))<=10){
 		if(sessionStorage["prendas"]==null){
 			sessionStorage["prendas"]=resulCantidad
-			i=0;
+			aux=0;
 		}
 		else{
-			i=sessionStorage["prendas"];
+			aux=sessionStorage["prendas"];
 			var aux1 = parseInt(sessionStorage["prendas"]) + parseInt(resulCantidad);
 			sessionStorage["prendas"]=aux1;
 		}
 		sessionStorage["cesta"]="true"
-		for(i; i<resulCantidad;i++){
-			var aux2 = id + " " + resulTalla
+		for(i=aux; i<sessionStorage["prendas"];i++){
+			var aux2 = id + "," + resulTalla + "," + url 
 			var key = i.toString()
 			sessionStorage.setItem(key, aux2)
 		}
@@ -105,6 +173,17 @@ function aniadir(id){
 	}else{
 		alert("No se puede tener mas de 10 productos para el probador")
 	}
+}
+
+function eliminar(posicion){
+	var num = sessionStorage["prendas"]
+	for(i=posicion; i<num -1 ; i++){
+		var a = i+1;
+		var aux = sessionStorage[a]
+		sessionStorage[i]=aux
+	}
+	sessionStorage["prendas"]=num - 1 
+	sessionStorage[posicion]="false"
 }
 
 function gestionFiltro(){

@@ -177,7 +177,7 @@
 						
 					</div>
 					<div class="col-sm-4 col-sm-offset-1">
-						<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#ticket">Solicitar ticket</button>		  
+						<button id="solcitarTicket"type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#ticket">Solicitar ticket</button>		  
 
 					</div>
 				</div>
@@ -227,7 +227,7 @@
 				<div class="modal-body">
 					<b>Nombre de la empresa:</b> SmartFitting
 					</br>
-					<b>Fecha:</b> <script>
+					<b>Fecha:</b> <script type="text/javascript">
 								var f = new Date();
 								document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
 							</script>

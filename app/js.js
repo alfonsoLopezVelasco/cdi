@@ -126,8 +126,7 @@ function cambiarTextos(){
 	}
 	if(sessionStorage["foto4"]=="true" && sessionStorage["foto4"]!=null){
 		document.getElementById("foto4").style.display="none"
-	}
-	
+	}	
 }
 
 function resetCheckbox(){

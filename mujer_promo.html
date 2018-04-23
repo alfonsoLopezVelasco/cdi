@@ -37,7 +37,7 @@
 							  </ul>
 							  <ul class="nav navbar-nav">	
 								<li style="margin-left:290px"><a onclick="resetCheckbox()" href="inicio_hombre.html">HOMBRE</a></li>
-								<li class="active"style="margin-left:20px"><a onclick="resetCheckbox()" href="inicio_mujer.html">MUJER</a></li>
+								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="inicio_mujer.html">MUJER</a></li>
 							  </ul>
 							  <br/>
 							  <br/>
@@ -46,10 +46,10 @@
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_camisa.html">CAMISAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_camisetas.html">CAMISETAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_pantalones.html">PANTALONES</a></li>
-								<li style="margin-left:20px" class="active" ><a href="mujer_zapatos.html">ZAPATOS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_zapatos.html">ZAPATOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_abrigos.html">ABRIGOS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_complementos.html">COMPLEMENTOS</a></li>
-								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
+								<li style="margin-left:20px"><a href="mujer_complementos.html">COMPLEMENTOS</a></li>
+								<li class="active" id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
 								
 							  </ul>
 							</div>
@@ -87,59 +87,37 @@
 		</div>
 		<div class="container">
 			<div class="row-fluid">
-				<div id="productos"class="col-sm-2" style="border-right: 2px solid">
-					<h3>FILTROS</h3><br/>
-					<div>
-						<p><b>TALLA</b></p>
-						<div style="margin-left:15px">
-							<div class="checkbox" >
-								<label>
-									<input id="talla_s" type="checkbox"> <b>37</b>
-								</label>
-								<br/><br/>
-								<label>
-									<input id="talla_m" type="checkbox"> <b>38</b>
-								</label>
-								<br/><br/>
-								<label>
-									<input id="talla_l" type="checkbox"> <b>39</b>
-								</label>
-								<br/><br/>
-								<label>
-									<input id="talla_xl" type="checkbox"> <b>40</b>
-								</label>
-								<br/>
-							</div>
-						</div>
-					</div>
-					<br/>
-					<a type="button" href="mujer_zapatos.html" onclick="gestionFiltro()" class="btn btn-success">Aplicar filtro</a>
-					<br/>
-					<br/>
-					<a type="button" onclick="borrarFiltros()"href="mujer_zapatos.html" class="btn btn-danger">Eliminar filtro </a>
-				</div>
 				<div class="col-sm-9">
 					<div id="prenda1" style="display:block" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Zapato negro cerrado</h4>
-							<a href="mujer_zapato_cerrado.html"><img src="Imagenes/mujer/zapatos/zapato1.jpg" alt="Zapato negro cerrado con tacon bajo y lentejuelas"/></a>
+							<h4>2x1 en camisetas</h4>
+							<img src="Imagenes/hombre/camisetas/camiseta2.jpg" alt="2x1 en camisetas"/>
 							<br/>
 							<br/>
 							<p>
-								<b>125.35€</b>
 								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
 							</p>
 						</div>
 					</div>
 					<div id="prenda2" class="col-sm-5 col-sm-offset-1 panel panel-default">
 						<div class="panel-body">
-							<h4>Zapato negro abierto</h4>
-							<a href="mujer_zapato_abierto.html"><img src="Imagenes/mujer/zapatos/zapato2.jpg" alt="Zapato de tacón alto negro abierto"/></a>
+							<h4>15% descuento a partir de 30€</h4>
+							<img src="Imagenes/promo.png" alt="15% descuento a partir de 30€"/>
 							<br/>
 							<br/>
 							<p>
-								<b>125.35€</b>
 								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa2">Ampliar imagen</button>
+							</p>
+						</div>
+					</div>
+					<div id="prenda3" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Regalo complemento</h4>
+							<img src="Imagenes/complementos/complemento2.jpg" alt="Regalo complemento"/>
+							<br/>
+							<br/>
+							<p>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa3">Ampliar imagen</button>
 							</p>
 						</div>
 					</div>
@@ -155,10 +133,10 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Zapato negro cerrado</h4>
+				  <h2 class="modal-title">2x1 en camisetas</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/mujer/zapatos/zapato1.jpg" alt="Zapato negro cerrado con tacon bajo y lentejuelas"/>
+					<img src="Imagenes/hombre/camisetas/camiseta2.jpg" alt="2x1 en camisetas"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -177,17 +155,41 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Zapato negro abierto</h4>
+				  <h2 class="modal-title">15% descuento a partir de 30€</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/mujer/zapatos/zapato2.jpg" alt="Zapato de tacón alto negro abierto"/>
+					<img src="Imagenes/promo.png" alt="15% descuento a partir de 30€/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 				</div>
 			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa3" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Regalo complemento</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/complementos/complemento2.jpg" alt="Regalo complemento"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
 			</div>
 		  </div>			  
 		</div>
 	</body>
+
 </html>

@@ -49,7 +49,7 @@
 								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="mujer_zapatos.html">ZAPATOS</a></li>
 								<li class="active" style="margin-left:15px"><a onclick="resetCheckbox()" href="mujer_abrigos.html">ABRIGOS</a></li>
 								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="mujer_complementos.html">COMPLEMENTOS</a></li>
-								<li id="promo" style="margin-left:15px"><a onclick="resetCheckbox()" href="mujer_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
+								<li id="promo" style="margin-left:15px"><a onclick="resetCheckbox()" href="mujer_promo.html"style="color:red">PROMOCIONES</a></li>
 								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="probador.html">PROBADOR</a></li>
 							  </ul>
 							</div>
@@ -126,6 +126,7 @@
 					<h2>Recomendaciones</h2>
 					
 					<p>Te recomendamos los siguientes productos para completar tu outfit</p>
+					<button type="button" style="float:right" class="btn btn-info btn-sm" data-toggle="modal" data-target="#camisa5">Mostrar vista previa</button>
 					<br/>
 					<br/>
 					<br/>
@@ -275,7 +276,28 @@
 			  </div>
 			</div>
 		  </div>			  
-		</div>	
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="camisa5" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Conjunto recomendado</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/conjuntos/mujer/conjunto_mujer_2.jpg" alt="Conjunto recomendado"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			</div>
+		  </div>			  
+		</div>			
 	</body>
 
 </html>

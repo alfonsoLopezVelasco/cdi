@@ -17,7 +17,6 @@ function cambiarTextos(){
 		document.getElementById("talla_s").setAttribute("checked",true);
 	}
 	if(sessionStorage["tallam"]=="true"){
-		
 		document.getElementById("talla_m").setAttribute("checked",true);
 	}
 	if(sessionStorage["tallal"]=="true"){
@@ -91,7 +90,7 @@ function cambiarTextos(){
 		document.getElementById("p8t").innerHTML=textos[0];
 		document.getElementById("p8").src=textos[2]
 	}
-		if(sessionStorage[9]=="false"  || sessionStorage[9]==null){
+	if(sessionStorage[9]=="false"  || sessionStorage[9]==null){
 		document.getElementById("9").style.display="none"
 	}else{
 		var textos = sessionStorage["9"].split(",")
@@ -172,13 +171,17 @@ function aniadir(id, url){
 
 function eliminar(posicion){
 	var num = parseInt(sessionStorage["prendas"])
-	for(i=posicion; i<num -1 ; i++){
-		var a = i+1;
-		var aux = sessionStorage[a]
-		sessionStorage[i]=aux
+	if(posicion<num){
+		for(i=posicion; i<num -1 ; i++){
+			var a = i+1;
+			var aux = sessionStorage[a]
+			sessionStorage[i]=aux
+		}
+		sessionStorage[num]="false"
+	}else{
+		sessionStorage[posicion]="false"
 	}
 	sessionStorage["prendas"]=(num - 1)
-	sessionStorage[posicion]="false"
 }
 
 function gestionFiltro(){
@@ -219,7 +222,5 @@ function borrarFiltros(){
 	document.getElementById("talla_m").setAttribute("checked",false); 
 	document.getElementById("talla_l").setAttribute("checked",false); 
 	document.getElementById("talla_xl").setAttribute("checked",false); 
-	document.getElementById("color1").setAttribute("checked",false); 
-	document.getElementById("color2").setAttribute("checked",false);
-	document.getElementById("color3").setAttribute("checked",false); 
+ 
 }

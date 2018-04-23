@@ -43,14 +43,14 @@
 							  <br/>
 							  <br/>
 							  <ul class="nav navbar-nav">	
-								<li style="margin-left:20px"><a href="hombre_camisa.html">CAMISAS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
-								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red">PROMOCIONES</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="probador.html">PROBADOR</a></li>
+								<li style="margin-left:15px"><a href="hombre_camisa.html">CAMISAS</a></li>
+								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
+								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
+								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
+								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
+								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
+								<li id="promo" style="margin-left:15px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red">PROMOCIONES</a></li>
+								<li style="margin-left:15px"><a onclick="resetCheckbox()" href="probador.html">PROBADOR</a></li>
 							  </ul>
 							</div>
 						</div>
@@ -156,6 +156,10 @@
 					</div>
 					<div class="col-sm-3">
 						<button id="camara" style="margin-left:50px" class="btn btn-lg btn-primary" type="button" data-toggle="modal" data-target="#hacerFoto"><span class="glyphicon glyphicon-camera"></span> Tomar una foto</button>
+						</br>
+						</br>
+						</br>
+						<button type="button" style="margin-left:50px" onclick="" class="btn btn-success btn-lg" data-toggle="modal" data-target="#prendas">Solicitar prendas</button>						
 					</div>
 					<div class="col-sm-5">
 						<div id="foto1" class="col-sm-12">
@@ -329,6 +333,27 @@
 				</div>
 				<div class="modal-body">
 					<h3>Aqui se abriria la camara de la tablet y haría una foto de la persona, las fotos se muestran a la derecha y desde ahi puede ampliarlas y borrarlas si lo desea</h3>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="prendas" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Pedir prendas</h4>
+				</div>
+				<div class="modal-body">
+					<h3>Su pedido llegará en 5 minutos</h3>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

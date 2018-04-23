@@ -12,6 +12,27 @@
 				height: auto;
 			}
 		</style>
+		<script type="text/javascript">
+			function startTime()
+			{
+			var today=new Date();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+			}
+			function checkTime(i)
+			{
+			if (i<10)
+			{
+			i="0" + i;
+			}
+			return i;
+			}
+		</script>
 	</head>
 	<body onload="cambiarTextos()">
 		</br>
@@ -201,10 +222,24 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Que metodo de pago negra</h4>
+				  <h2 class="modal-title">Ticket</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg" alt="Camisa lisa negra/>
+					Nombre de la empresa: SmartFitting
+					</br>
+					Fecha: <script>
+								var f = new Date();
+								document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+							</script>
+					</br>
+					Hora: <script type="text/javascript">
+							var d = new Date();
+							document.write(d.getHours());
+							document.write(":");
+							document.write(d.getMinutes());
+							document.write(":");
+							document.write(d.getSeconds());
+						  </script>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

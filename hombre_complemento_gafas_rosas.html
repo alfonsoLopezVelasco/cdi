@@ -31,7 +31,7 @@
 							<div class="collapse navbar-collapse" id="myNavbar">
 							  <ul class="nav navbar-nav navbar-right">
 							   <button class="btn btn-lg btn-default navbar-btn">
-									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cesta <span id="num_prod">(2)</span>
+									<span style="display:block" id="numProd"></span>
 							   </button>
 							   <button id="inicio_sesion"type="button" class="btn btn-lg btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Desconectar</button>
 							  </ul>
@@ -43,12 +43,12 @@
 							  <br/>
 							  <br/>
 							  <ul class="nav navbar-nav">	
-								<li style="margin-left:20px"><a onclick="resetCheckbox()"href="hombre_camisa.html">CAMISAS</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="mujer_camisa.html">CAMISAS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_camisetas.html">CAMISETAS</a></li>
-								<li class="active" style="margin-left:20px"><a href="hombre_pantalones.html">PANTALONES</a></li>
+								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_pantalones.html">PANTALONES</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_zapatos.html">ZAPATOS</a></li>
 								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_abrigos.html">ABRIGOS</a></li>
-								<li style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
+								<li class="active" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_complementos.html">COMPLEMENTOS</a></li>
 								<li id="promo" style="margin-left:20px"><a onclick="resetCheckbox()" href="hombre_promo.html"style="color:red"><b>PROMOCIONES</b></a></li>
 								
 							  </ul>
@@ -86,110 +86,66 @@
 		  </div>			  
 		</div>
 		<div class="container">
+		
+		
+		
 			<div class="row-fluid">
-				<div id="productos"class="col-sm-2" style="border-right: 2px solid">
-					<h3>FILTROS</h3><br/>
-					<div>
-						<p><b>TALLA</b></p>
-						<div style="margin-left:15px">
-							<div class="checkbox" >
-								<label>
-									<input id="talla_s" type="checkbox"> <b>S</b>
-								</label>
-								<br/><br/>
-								<label>
-									<input id="talla_m" type="checkbox"> <b>M</b>
-								</label>
-								<br/><br/>
-								<label>
-									<input id="talla_l" type="checkbox"> <b>L</b>
-								</label>
-								<br/><br/>
-								<label>
-									<input id="talla_xl" type="checkbox"> <b>XL</b>
-								</label>
-								<br/>
-							</div>
+				<div class="col-sm-12">
+					<h1>Gafas de sol rosas</h1>
+					<span data-toggle="modal" data-target="#camisa"><div class="col-sm-5 panel panel-default">
+						<img src="Imagenes/complementos/complemento2.jpg"alt="Gafas de sol de patilla fina con cristal rosado">
+					</div></span>
+					<div class="col-sm-5" style="margin-left:50px;">
+						<br/>
+						<h3>Cantidad</h3>
+						<div class="form-group col-sm-5">
+							<select class="form-control" id="cantidad">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>
+							  <option value="9">9</option>
+							  <option value="10">10</option>
+							</select>
 						</div>
-					</div>	
-					<br/>
-					<a type="button" href="hombre_pantalones.html" onclick="gestionFiltro()" class="btn btn-success">Aplicar filtro</a>
-					<br/>
-					<br/>
-					<a type="button" onclick="borrarFiltros()"href="hombre_pantalones.html" class="btn btn-danger">Eliminar filtro </a>
-				</div>
-				<div class="col-sm-9">
-					<div id="prenda1" style="display:block" class="col-sm-5 col-sm-offset-1 panel panel-default">
-						<div class="panel-body">
-							<h4>Pantalón negro</h4>
-							<a href="hombre_pantalon_negro.html"><img src="Imagenes/hombre/pantalones/pantalones1.jpg" alt="Pantalon negro con estampado blanco"/></a>
-							<br/>
-							<br/>
-							<p>
-								<b>125.35€</b>
-								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa1">Ampliar imagen</button>
-							</p>
-						</div>
-					</div>
-					<div id="prenda2" class="col-sm-5 col-sm-offset-1 panel panel-default">
-						<div class="panel-body">
-							<h4>Pantalón verde</h4>
-							<a href="hombre_pantalon_verde.html"><img src="Imagenes/hombre/pantalones/pantalones2.jpg" alt="Pantalon verde con estampado de palmeras negras"/></a>
-							<br/>
-							<br/>
-							<p>
-								<b>125.35€</b>
-								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#camisa2">Ampliar imagen</button>
-							</p>
-						</div>
+					    <br/>
+					    <br/>
+						<h3>Descripción</h3>
+						<p>
+							Este producto de algosodfshfisdhfs fsdfsdfsfsdf							
+						</p>
+						<br/>	
+						<br/>	
+						<br/>
+						<a href="hombre_complemento_gafas_rosa.html" onclick="aniadir('Gafas de sol rosas', 'Imagenes/complementos/complemento2.jpg')" class="btn btn-lg btn-success">Añadir al probador</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 		  <!-- Modal -->
-		  <div class="modal fade" id="camisa1" role="dialog">
+		  <div class="modal fade" id="camisa" role="dialog">
 			<div class="modal-dialog">
 			
 			  <!-- Modal content-->
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Pantalón negro</h4>
+				  <h2 class="modal-title">Gafas rosas</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/pantalones/pantalones1.jpg" alt="Pantalon negro con estampado blanco"/>
+					<img src="Imagenes/complementos/complemento2.jpg" alt="Gafas de sol de patilla fina con cristal rosado"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 				</div>
 			  </div>
-			  
 			</div>
 		  </div>			  
-		</div>
-		<div class="container">
-		  <!-- Modal -->
-		  <div class="modal fade" id="camisa2" role="dialog">
-			<div class="modal-dialog">
-			
-			  <!-- Modal content-->
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Pantalón verde</h4>
-				</div>
-				<div class="modal-body">
-					<img src="Imagenes/hombre/pantalones/pantalones2.jpg" alt="Pantalon verde con estampado de palmeras negras"/>
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				</div>
-			  </div>
-			  
-			</div>
-		  </div>			  
-		</div>
+		</div>			
 	</body>
-
 </html>

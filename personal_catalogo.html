@@ -36,13 +36,121 @@
 								<li style="margin-left:190px"><a href="personal_inicio.html">PROBADOR</a></li>
 								<li style="margin-left:20px"><a href="personal_ofertas.html">OFERTAS</a></li>
 								<li style="margin-left:20px"><a href="personal_eventos.html">EVENTOS</a></li>
-								<li class="active" style="margin-left:20px"><a href="personal_catalogo.html">CATALOGO</a></li>
+								<li class="active" style="margin-left:20px"><a href="personal_catalogo.html">CATÁLOGO</a></li>
 							  </ul>
 							</div>
 						</div>
 					</nav>
 				</div>
+				
+				<div class="col-sm-9">
+					<div id="prenda1" style="display:block" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Camisa negra</h4>
+							<a href="hombre_camisa_negra.html"><img src="Imagenes/hombre/Camisas/camisa_negraa.jpg" alt="Camisa lisa negra"/></a>
+							<br/>
+							<br/>
+							<p>
+								<b id="precio1">125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#modal1">Modificar precio</button>
+							</p>
+						</div>
+					</div>
+					<div id="prenda2" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Camisa a cuadros</h4>
+							<img src="Imagenes/hombre/Camisas/camisa_cuadros.jpg" alt="Camisa de cuadros en negro, blanco y tonos de grises"/>
+							<br/>
+							<br/>
+							<p>
+								<b id="precio2">125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#modal2">Modificar precio</button>
+							</p>
+						</div>
+					</div>
+					<div id="prenda3" class="col-sm-5 col-sm-offset-1 panel panel-default">
+						<div class="panel-body">
+							<h4>Camisa azul</h4>
+							<img src="Imagenes/hombre/Camisas/camisa_azul.jpg" alt="Camisa lisa azul"/>
+							<br/>
+							<br/>
+							<p>
+								<b id="precio3">125.35€</b>
+								<button type="button" style="float:right" class="btn btn-info" data-toggle="modal" data-target="#modal3">Modificar precio</button>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="modal1" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa negra</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" id="inputPrecio1"/> 
+					<a href="personal_catalogo.html" onclick="cambiarPrecio(1)" class="btn btn-lg btn-success">Cambiar precio</a>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>	
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="modal2" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa a cuadros</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" id="inputPrecio2"  onkeyup="obtenerTexto(this)"/> 
+					<a href="personal_catalogo.html" onclick="cambiarPrecio(2)" class="btn btn-lg btn-success">Cambiar precio</a>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="modal3" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Camisa azul</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" id="inputPrecio3"/> 
+					<a href="personal_catalogo.html"onclick="cambiarPrecio(3)" class="btn btn-lg btn-success">Cambiar precio</a>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>	
 	</body>
 </html>		

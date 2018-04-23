@@ -172,10 +172,8 @@ function aniadir(id, url){
 function eliminar(posicion){
 	var num = parseInt(sessionStorage["prendas"])
 	if(posicion<num){
-		for(i=posicion; i<num -1 ; i++){
-			var a = i+1;
-			var aux = sessionStorage[a]
-			sessionStorage[i]=aux
+		for(i=posicion; i<num ; i++){
+			sessionStorage[i]=sessionStorage[i+1]
 		}
 		sessionStorage[num]="false"
 	}else{

@@ -40,6 +40,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["1"].split(",")
 		document.getElementById("p1t").innerHTML=textos[0];
 		document.getElementById("p1").src=textos[2]
+		document.getElementById("p1").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[2]=="false"  || sessionStorage[2]==null){
 		document.getElementById("2").style.display="none"
@@ -47,6 +48,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["2"].split(",")
 		document.getElementById("p2t").innerHTML=textos[0];
 		document.getElementById("p2").src=textos[2]
+		document.getElementById("p2").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[3]=="false"  || sessionStorage[3]==null){
 		document.getElementById("3").style.display="none"
@@ -54,6 +56,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["3"].split(",")
 		document.getElementById("p3t").innerHTML=textos[0];
 		document.getElementById("p3").src=textos[2]
+		document.getElementById("p3").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[4]=="false"  || sessionStorage[4]==null){
 		document.getElementById("4").style.display="none"
@@ -61,6 +64,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["4"].split(",")
 		document.getElementById("p4t").innerHTML=textos[0];
 		document.getElementById("p4").src=textos[2]
+		document.getElementById("p4").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[5]=="false"  || sessionStorage[5]==null){
 		document.getElementById("5").style.display="none"
@@ -68,6 +72,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["5"].split(",")
 		document.getElementById("p5t").innerHTML=textos[0];
 		document.getElementById("p5").src=textos[2]
+		document.getElementById("p5").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[6]=="false"  || sessionStorage[6]==null){
 		document.getElementById("6").style.display="none"
@@ -75,6 +80,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["6"].split(",")
 		document.getElementById("p6t").innerHTML=textos[0];
 		document.getElementById("p6").src=textos[2]
+		document.getElementById("p6").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[7]=="false"  || sessionStorage[7]==null){
 		document.getElementById("7").style.display="none"
@@ -82,6 +88,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["7"].split(",")
 		document.getElementById("p7t").innerHTML=textos[0];
 		document.getElementById("p7").src=textos[2]
+		document.getElementById("p7").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[8]=="false"  || sessionStorage[8]==null){
 		document.getElementById("8").style.display="none"
@@ -89,6 +96,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["8"].split(",")
 		document.getElementById("p8t").innerHTML=textos[0];
 		document.getElementById("p8").src=textos[2]
+		document.getElementById("p8").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[9]=="false"  || sessionStorage[9]==null){
 		document.getElementById("9").style.display="none"
@@ -96,6 +104,7 @@ function cambiarTextos(){
 		var textos = sessionStorage["9"].split(",")
 		document.getElementById("p9t").innerHTML=textos[0];
 		document.getElementById("p9").src=textos[2]
+		document.getElementById("p9").alt="miniatura de " + textos[0]
 	}
 	if(sessionStorage[10]=="false"  || sessionStorage[10]==null){
 		document.getElementById("10").style.display="none"
@@ -103,6 +112,20 @@ function cambiarTextos(){
 		var textos = sessionStorage["10"].split(",")
 		document.getElementById("p10t").innerHTML=textos[0];
 		document.getElementById("p10").src=textos[2]
+		document.getElementById("p10").alt="miniatura de " + textos[0]
+	}
+	
+	if(sessionStorage["foto1"]=="true" || sessionStorage["foto1"]==null){
+		document.getElementById("foto1").style.display="none"
+	}
+	if(sessionStorage["foto2"]=="true" && sessionStorage["foto2"]!=null){
+		document.getElementById("foto2").style.display="none"
+	}
+	if(sessionStorage["foto3"]=="true" && sessionStorage["foto3"]!=null){
+		document.getElementById("foto3").style.display="none"
+	}
+	if(sessionStorage["foto4"]=="true" && sessionStorage["foto4"]!=null){
+		document.getElementById("foto4").style.display="none"
 	}
 	
 }
@@ -167,6 +190,17 @@ function aniadir(id, url){
 	}else{
 		alert("No se puede tener mas de 10 productos para el probador")
 	}
+}
+
+function eliminarFoto(foto){
+	if(foto==1)
+		sessionStorage["foto1"]="true"
+	else if(foto==2)
+		sessionStorage["foto2"]="true"
+	else if(foto==3)
+		sessionStorage["foto3"]="true"
+	else
+		sessionStorage["foto4"]="true"
 }
 
 function eliminar(posicion){

@@ -155,36 +155,44 @@
 						</div>
 					</div>
 					<div class="col-sm-3">
-						<button id="camara" style="margin-left:50px" class="btn btn-lg btn-primary" type="button"><span class="glyphicon glyphicon-camera"></span> Tomar una foto</button>
+						<button id="camara" style="margin-left:50px" class="btn btn-lg btn-primary" type="button" data-toggle="modal" data-target="#hacerFoto"><span class="glyphicon glyphicon-camera"></span> Tomar una foto</button>
 					</div>
 					<div class="col-sm-5">
-						<div id="foto1" class="col-sm-3 panel panel-default">
-								<img src=""/ >
+						<div id="foto1" class="col-sm-12">
+							<div class="col-sm-3 panel panel-default" data-toggle="modal" data-target="#imagen1">
+									<img src="Imagenes/probador/imagen1.jpg" alt="miniatura de la imagen 1 tomada como foto"/>
+								</div>
+								<div class="col-sm-7"><br/><p>Imagen 1</p></div>
+								<div class="col-sm-2">
+									<a href="probador.html" onclick="eliminarFoto(1)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 							</div>
-							<div class="col-sm-7"><br/><p>Imagen 1</p></div>
-							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 						</div>
-						<div id="foto2" class="col-sm-3 panel panel-default">
-								<img src=""/ >
+						<div id="foto2" class="col-sm-12">
+							<div class="col-sm-3 panel panel-default" data-toggle="modal" data-target="#imagen2">
+									<img src="Imagenes/probador/imagen2.jpg" alt="miniatura de la imagen 2 tomada como foto" />
 							</div>
 							<div class="col-sm-7"><br/><p>Imagen 2</p></div>
 							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+									<a href="probador.html" onclick="eliminarFoto(2)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+							</div>
 						</div>
-						<div id="foto3" class="col-sm-3 panel panel-default">
-								<img src=""/ >
+						<div id="foto3" class="col-sm-12">
+							<div class="col-sm-3 panel panel-default" data-toggle="modal" data-target="#imagen3">
+									<img src="Imagenes/probador/imagen3.jpg" alt="miniatura de la imagen 3 tomada como foto"/>
 							</div>
 							<div class="col-sm-7"><br/><p>Imagen 3</p></div>
 							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+									<a href="probador.html" onclick="eliminarFoto(3)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+							</div>
 						</div>
-						<div id="foto4" class="col-sm-3 panel panel-default">
-								<img src=""/ >
+						<div id="foto4" class="col-sm-12">
+							<div class="col-sm-3 panel panel-default" data-toggle="modal" data-target="#imagen4">
+									<img src="Imagenes/probador/imagen4.jpg" alt="miniatura de la imagen 4 tomada como foto"/>
 							</div>
 							<div class="col-sm-7"><br/><p>Imagen 4</p></div>
 							<div class="col-sm-2">
-								<a href="probador.html" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+									<a href="probador.html" onclick="eliminarFoto(4)" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -222,17 +230,17 @@
 		</div>
 		<div class="container">
 		  <!-- Modal -->
-		  <div class="modal fade" id="camisa1" role="dialog">
+		  <div class="modal fade" id="imagen1" role="dialog">
 			<div class="modal-dialog">
 			
 			  <!-- Modal content-->
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Camisa negra</h4>
+				  <h2 class="modal-title">Imagen 1</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_negraa.jpg" alt="Camisa lisa negra/>
+					<img src="Imagenes/probador/imagen1.jpg" alt="Camisa lisa negra/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -244,17 +252,17 @@
 		</div>
 		<div class="container">
 		  <!-- Modal -->
-		  <div class="modal fade" id="camisa2" role="dialog">
+		  <div class="modal fade" id="imagen2" role="dialog">
 			<div class="modal-dialog">
 			
 			  <!-- Modal content-->
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Camisa a cuadros</h4>
+				  <h2 class="modal-title">Imagen 2</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_cuadros.jpg" alt="Camisa de cuadros en negro, blanco y tonos de grises"/>
+					<img src="Imagenes/probador/imagen2.jpg" alt="Camisa de cuadros en negro, blanco y tonos de grises"/>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -266,17 +274,61 @@
 		</div>
 		<div class="container">
 		  <!-- Modal -->
-		  <div class="modal fade" id="camisa3" role="dialog">
+		  <div class="modal fade" id="imagen3" role="dialog">
 			<div class="modal-dialog">
 			
 			  <!-- Modal content-->
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h2 class="modal-title">Camisa azul</h4>
+				  <h2 class="modal-title">Imagen 3</h4>
 				</div>
 				<div class="modal-body">
-					<img src="Imagenes/hombre/Camisas/camisa_azul.jpg" alt="Camisa lisa azul"/>
+					<img src="Imagenes/probador/imagen3.jpg" alt="Camisa lisa azul"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="imagen4" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Imagen 4</h4>
+				</div>
+				<div class="modal-body">
+					<img src="Imagenes/probador/imagen1.jpg" alt="Camisa lisa azul"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			  </div>
+			  
+			</div>
+		  </div>			  
+		</div>
+		<div class="container">
+		  <!-- Modal -->
+		  <div class="modal fade" id="hacerFoto" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h2 class="modal-title">Hacer Foto</h4>
+				</div>
+				<div class="modal-body">
+					<h3>Aqui se habriria la camara de la tablet y haría una foto de la persona, las fotos se muestran a la derecha y desde ahi puede ampliarlas y borrarlas si lo desea</h3>
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
